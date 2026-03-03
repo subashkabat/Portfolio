@@ -24,7 +24,7 @@ function useIsMobile() {
 
 // Typewriter effect component
 function TypewriterEffect() {
-    const roles = useMemo(() => ["Principal", "Professor", "Researcher", "Ph.D. Scholar", "Innovator"], []);
+    const roles = useMemo(() => ["Principal", "Professor", "Researcher", "Ph.D.", "Innovator"], []);
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
     const [displayText, setDisplayText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
