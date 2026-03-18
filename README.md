@@ -235,7 +235,7 @@ This project is for personal/academic use. All content and personal information 
 
 ## 🙏 Credits
 
-- **Design & Development** — Built with ❤️
+- **Design & Development** — Built with ❤️TARUN
 - **Framework** — [Next.js](https://nextjs.org/) by Vercel
 - **Animations** — [Framer Motion](https://www.framer.com/motion/)
 - **Styling** — [Tailwind CSS](https://tailwindcss.com/)
