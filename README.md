@@ -1,5 +1,7 @@
 # Dr. Subash Ranjan Kabat — Portfolio Website
 
+🌐 **Live:** [drsrkabat.com](https://drsrkabat.com) | [portfolio-site-rho-eight-55.vercel.app](https://portfolio-site-rho-eight-55.vercel.app)
+
 A modern, visually stunning portfolio website for **Dr. Subash Ranjan Kabat**, Principal & Professor at Radhakrishna Institute of Technology and Engineering (RITE), Bhubaneswar. Built with Next.js 16, React 19, Tailwind CSS 4, and Framer Motion.
 
 ---
@@ -10,11 +12,15 @@ A modern, visually stunning portfolio website for **Dr. Subash Ranjan Kabat**, P
 |---|---|
 | **Single-Page Design** | Smooth scroll-based navigation across all sections |
 | **Glassmorphism UI** | Frosted-glass cards with dynamic hover effects and animated gradient borders |
-| **Particle System** | Floating particle animation in the hero section |
+| **Particle System** | Floating particle animation in the hero section (desktop only) |
+| **Typewriter Effect** | Animated role typing in hero — Principal, Professor, Researcher, Ph.D., Innovator |
 | **Animated Counters** | Statistics that count up when scrolled into view |
 | **Shimmer Text** | Multi-color gradient text with animated shimmer effect |
 | **Aurora Dividers** | Animated gradient lines between sections |
-| **Responsive Layout** | Fully responsive design optimized for mobile, tablet, and desktop |
+| **Responsive Layout** | Fully responsive — mobile-optimized with performance gating |
+| **Scroll Progress Bar** | Top progress indicator showing page scroll position |
+| **Cursor Glow** | Custom cursor glow effect (desktop only) |
+| **Back to Top** | Floating button to scroll back to top |
 | **Custom Scrollbar** | Gradient-styled scrollbar matching the site theme |
 | **SEO Optimized** | Full meta tags, semantic HTML, and proper heading hierarchy |
 | **Google Fonts** | Inter (body) and Outfit (headings) for premium typography |
@@ -40,24 +46,32 @@ A modern, visually stunning portfolio website for **Dr. Subash Ranjan Kabat**, P
 portfolio-site/
 ├── public/                     # Static assets
 │   ├── profile.png             # Profile photo
-│   └── *.svg                   # Icons and logos
+│   ├── cv.pdf                  # Downloadable CV
+│   └── icon.svg                # Site icon
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx          # Root layout (fonts, metadata, SEO)
 │   │   ├── page.tsx            # Main page — assembles all sections
 │   │   ├── globals.css         # Global styles, design tokens, animations
-│   │   └── favicon.ico         # Favicon
+│   │   └── icon.svg            # App favicon
 │   └── components/
-│       ├── Navbar.tsx           # Sticky navigation bar with scroll spy
-│       ├── Hero.tsx             # Hero section with particles & CTA buttons
+│       ├── Navbar.tsx           # Sticky nav bar with scroll spy & mobile drawer
+│       ├── Hero.tsx             # Hero section with particles, typewriter & CTA
 │       ├── About.tsx            # Bio section with animated stat counters
-│       ├── Education.tsx        # Academic qualifications timeline
-│       ├── Experience.tsx       # Professional experience timeline
-│       ├── Publications.tsx     # Research papers & journal articles
-│       ├── Skills.tsx           # Technical skills & competencies
-│       ├── Awards.tsx           # Honors, awards & recognitions
-│       ├── Contact.tsx          # Contact form & information
-│       └── Footer.tsx           # Site footer with copyright
+│       ├── Education.tsx        # Academic qualifications timeline (Ph.D., M.Tech, B.Tech)
+│       ├── Experience.tsx       # Professional experience timeline (6 roles)
+│       ├── ResearchHighlights.tsx # Featured research publications (4 highlights)
+│       ├── Publications.tsx     # Full publications list (18 papers, expandable)
+│       ├── Skills.tsx           # Technical skills in 5 categories + journal reviewer list
+│       ├── Awards.tsx           # Awards, certifications, memberships & responsibilities
+│       ├── Vision.tsx           # Vision for students (5 pillars) & institution (8 goals)
+│       ├── Testimonials.tsx     # Endorsements from peers & institutions
+│       ├── Contact.tsx          # Contact info & research profile links
+│       ├── Footer.tsx           # Footer with social links & credits
+│       ├── ScrollProgress.tsx   # Top scroll progress bar
+│       ├── CursorGlow.tsx       # Custom cursor glow effect
+│       ├── BackToTop.tsx        # Floating back-to-top button
+│       └── BackgroundAnimation.tsx # Background animation effects
 ├── next.config.ts              # Next.js configuration
 ├── tsconfig.json               # TypeScript configuration
 ├── postcss.config.mjs          # PostCSS configuration (Tailwind CSS)
@@ -79,7 +93,7 @@ portfolio-site/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/<your-username>/portfolio-site.git
+   git clone https://github.com/subashkabat/Portfolio.git
    cd portfolio-site
    ```
 
@@ -109,11 +123,56 @@ portfolio-site/
 
 ---
 
+## 📄 Sections Overview
+
+### 🏠 Hero
+Full-viewport hero with floating particle system, animated profile photo with rotating gradient ring, typewriter role effect (Principal, Professor, Researcher, Ph.D., Innovator), research profile links (LinkedIn, Google Scholar, ORCID, Scopus, ResearchGate, Vidwan, IEEE), and CTA buttons.
+
+### 👤 About
+Personal bio with research interests (Renewable Energy, Power Electronics, Smart Grid, EVs, IoT, AI/ML) and animated statistics — 18+ years experience, 32+ publications, 7 journal reviews, 8+ professional memberships.
+
+### 🎓 Education
+Timeline of academic qualifications:
+- **Ph.D.** — KIIT Deemed to be University (2022) — Fault Ride Through Technique for Grid Connected DFIG
+- **M.Tech** — VSSUT, Burla (2011) — Power System, CGPA: 8.30
+- **B.Tech** — BIET / BPUT (2006) — Electrical Engineering, 71.56%
+
+### 💼 Experience
+Professional timeline with 6 roles from Lecturer (2006) to Principal (2023–Present) at RITE, Bhubaneswar.
+
+### 🔬 Research Highlights
+4 featured publications spanning DFIG wind turbines, smart grid cybersecurity, multilevel inverters, and AI for sustainability.
+
+### 📚 Publications
+18 research papers in IEEE conferences and international journals (Elsevier, Springer, etc.), with expandable view.
+
+### 🧠 Skills
+5 categorized skill groups — Programming (C, C++, Python), Simulation (MATLAB, Simulink, ETAP, PLECS), Research & AI/ML, Power & Energy, Tools & OS. Plus 7 journal reviewer credentials.
+
+### 🏆 Awards & Memberships
+- **Awards** — Prime Teachers Award, Best IQAC Coordinator, NxtWave AI Appreciation
+- **Professional Certifications** — Palo Alto Cybersecurity, BPUT Future Ready, IEEE/Elsevier Reviewer, AJEPS Editorial Board
+- **Professional Bodies** — IEEE, ISTE, SESI, IAENG, IFERP, InSc, SIPH, I2OR
+- **Key Responsibilities** — 10 leadership roles including Principal, IQAC Coordinator, Innovation Council President
+
+### 🔭 Vision & Strategy
+- **Vision for Students** — 5 pillars: Skill-Oriented Education, Research & Innovation, Industry Readiness, Entrepreneurship, Holistic Development
+- **Vision for Institution** — 8 strategic goals covering advanced labs, emerging CS programs, global collaborations, technology-driven campus, and innovation ecosystem
+
+### 💬 Testimonials
+Endorsements from research collaborators, academic peers, and institutional reviews.
+
+### 📬 Contact
+Contact information (phone, email, address, institution) and 7 research profile links (LinkedIn, Google Scholar, ORCID, Scopus, ResearchGate, Vidwan, IEEE Collabratec).
+
+### 🔻 Footer
+Social profile links with animated gradient divider and credits.
+
+---
+
 ## 🎨 Design System
 
 ### Color Palette
-
-The site uses a carefully curated dark-mode color palette defined as CSS custom properties in `globals.css`:
 
 | Token | Value | Usage |
 |---|---|---|
@@ -138,54 +197,41 @@ The site uses a carefully curated dark-mode color palette defined as CSS custom 
 | `.glow-border` | Blue glow box shadow |
 | `.section-aurora` | Animated gradient border-top divider between sections |
 | `.text-glow` | Pulsing text shadow effect |
-| `.dots-pattern` | Subtle dot grid background pattern |
-
-### Animations
-
-| Animation | Duration | Description |
-|---|---|---|
-| `gradient-shift` | 8s | Background gradient position cycling |
-| `float` | 6s | Vertical floating motion |
-| `glow-pulse` | 3s | Opacity pulsing glow |
-| `slide-up` | 0.6s | Entrance from below |
-| `shimmer` | 3s | Text gradient position shift |
-| `sparkle` | 2s | Scale-in/out sparkle |
-| `border-flow` | 4s | Gradient border animation |
-| `particle-float` | — | Full-viewport vertical particle drift |
-| `aurora` | — | Rotating/scaling aurora light effect |
-| `text-glow` | 3s | Pulsing text shadow |
-| `card-shine` | — | Horizontal shine sweep on cards |
 
 ---
 
-## 📄 Sections Overview
+## 🌐 Deployment
 
-### 🏠 Hero
-Full-viewport hero section with floating particle system, animated profile image with glow ring, gradient title text, and call-to-action buttons.
+### Production (Vercel)
 
-### 👤 About
-Bio section with a personal introduction and an animated statistics grid showing years of experience, publications count, journal reviews, and professional memberships — each with a count-up animation.
+The site is deployed on [Vercel](https://vercel.com/) with automatic deployments on push to `main`:
 
-### 🎓 Education
-Academic qualifications displayed in a timeline format, including Ph.D., M.Tech, and B.Tech degrees with institution details and specialization info.
+| Domain | URL |
+|---|---|
+| **Custom Domain** | [drsrkabat.com](https://drsrkabat.com) |
+| **WWW** | [www.drsrkabat.com](https://www.drsrkabat.com) |
+| **Vercel URL** | [portfolio-site-rho-eight-55.vercel.app](https://portfolio-site-rho-eight-55.vercel.app) |
 
-### 💼 Experience
-Professional experience timeline showcasing roles from Principal to Lecturer across different institutions, with key responsibilities highlighted.
+### GitHub Repository
 
-### 📚 Publications
-Research publications section listing journal articles and IEEE conference papers, organized by type with hover-interactive cards.
+```
+https://github.com/subashkabat/Portfolio.git
+```
 
-### 🧠 Skills
-Technical skills and competencies displayed in categorized groups — including Renewable Energy, Power Systems, AI/ML, IoT, and more.
+### Deploy Updates
 
-### 🏆 Awards
-Honors, awards, and recognitions received throughout the academic and professional career.
+```bash
+git add -A
+git commit -m "your commit message"
+git push origin main
+```
+Vercel auto-deploys from the `main` branch.
 
-### 📬 Contact
-Contact information section with a form for inquiries and direct contact details.
+### Domain Setup (Hostinger → Vercel)
 
-### 🔻 Footer
-Minimal footer with copyright information.
+DNS Nameservers configured on Hostinger:
+- `ns1.vercel-dns.com`
+- `ns2.vercel-dns.com`
 
 ---
 
@@ -195,6 +241,7 @@ Minimal footer with copyright information.
 
 - **Name, title, and bio** — Edit the content directly in the respective component files under `src/components/`.
 - **Profile photo** — Replace `public/profile.png` with your own image (recommended: square, 400×400px minimum).
+- **CV** — Replace `public/cv.pdf` with your own CV file.
 - **Metadata & SEO** — Update the `metadata` export in `src/app/layout.tsx`.
 
 ### Modifying Colors
@@ -205,25 +252,7 @@ Edit the `@theme inline` block at the top of `src/app/globals.css` to change the
 
 1. Create or delete the component file in `src/components/`.
 2. Add or remove the corresponding import and JSX tag in `src/app/page.tsx`.
-
----
-
-## 🌐 Deployment
-
-This project is ready to deploy on [Vercel](https://vercel.com/) (recommended for Next.js):
-
-1. Push your code to a GitHub repository.
-2. Go to [vercel.com](https://vercel.com/) and import the repository.
-3. Vercel will auto-detect Next.js and deploy.
-
-Other hosting options:
-
-| Platform | Guide |
-|---|---|
-| **Vercel** | [Deploy Next.js on Vercel](https://vercel.com/docs/frameworks/nextjs) |
-| **Netlify** | [Deploy Next.js on Netlify](https://docs.netlify.com/frameworks/next-js/overview/) |
-| **AWS Amplify** | [Deploy Next.js on Amplify](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-nextjs-app.html) |
-| **Docker** | Use `next build` + `next start` in a Node.js container |
+3. Update the `navLinks` array in `src/components/Navbar.tsx`.
 
 ---
 
@@ -235,7 +264,7 @@ This project is for personal/academic use. All content and personal information 
 
 ## 🙏 Credits
 
-- **Design & Development** — Built with ❤️TARUN
+- **Design & Development** — Built with ❤️ by TARUN
 - **Framework** — [Next.js](https://nextjs.org/) by Vercel
 - **Animations** — [Framer Motion](https://www.framer.com/motion/)
 - **Styling** — [Tailwind CSS](https://tailwindcss.com/)
